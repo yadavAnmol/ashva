@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-)=j=8_%t*b#(#ru$*+&7t)_-6v)vgn90vy443vce^b4q((bqi+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []  #"127.0.0.1", "localhost", "192.168.1.37" use this for phone view
+ALLOWED_HOSTS = ["ashva-1.onrender.com", "localhost", "127.0.0.1"]  #"127.0.0.1", "localhost", "192.168.1.37" use this for phone view
 
 
 # Application definition
