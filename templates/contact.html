@@ -1,0 +1,92 @@
+{% load static %}
+<!-- link the static files with html -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ashva</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header>
+      <div class="logo">
+        <i class="fa-regular fa-camera"></i>
+        <h1>AshvaLens</h1>
+      </div>
+
+      <!-- Hamburger -->
+      <div class="menu-toggle" id="menu-toggle">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+
+      <!-- Desktop Menu -->
+      <ul id="nav-links" class="nav-links">
+        <li><a href="{% url 'home' %}">Home</a></li>
+        <li><a href="{% url 'journeys' %}">My Journeys</a></li>
+        <li><a href="{% url 'add' %}">Add Photo</a></li>
+        <li><a href="{% url 'about' %}">About</a></li>
+        <li><a href="{% url 'contact' %}">Contact</a></li>
+      </ul>
+    </header>
+
+    <!-- Overlay for mobile menu -->
+    <div class="nav-overlay" id="nav-overlay"></div>
+
+    <!-- Add Section -->
+    <section class="add-section">
+      <div class="add-card">
+        <h2>Contact Us</h2>
+        <p class="subtitle">
+          Have a question, feedback, or just want to say hello?<br />Fill out
+          the form below.
+        </p>
+
+        <form id="add-photo-form">
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="e.g., John Doe"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="e.g., xyz@gmail.com"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Write your message..."
+              rows="2"
+              required
+            ></textarea>
+          </div>
+
+          <button type="submit" class="submit-btn">Submit</button>
+        </form>
+      </div>
+    </section>
+
+    <script src="{% static 'js/script.js' %}"></script>
+  </body>
+</html>

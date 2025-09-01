@@ -1,0 +1,96 @@
+{% load static %}
+<!-- link the static files with html -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ashva</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header>
+      <div class="logo">
+        <i class="fa-regular fa-camera"></i>
+        <h1>AshvaLens</h1>
+      </div>
+
+      <!-- Hamburger -->
+      <div class="menu-toggle" id="menu-toggle">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+
+      <!-- Desktop Menu -->
+      <ul id="nav-links" class="nav-links">
+        <li><a href="{% url 'home' %}">Home</a></li>
+        <li><a href="{% url 'journeys' %}">My Journeys</a></li>
+        <li><a href="{% url 'add' %}">Add Photo</a></li>
+        <li><a href="{% url 'about' %}">About</a></li>
+        <li><a href="{% url 'contact' %}">Contact</a></li>
+      </ul>
+    </header>
+
+    <!-- Overlay for mobile menu -->
+    <div class="nav-overlay" id="nav-overlay"></div>
+
+    <!-- Add Section -->
+    <section class="add-section">
+      <div class="add-card">
+        <h2>Capture a Memory</h2>
+        <p class="subtitle">
+          Add a new photo to your collection or start a new journey.
+        </p>
+
+        <form id="add-photo-form">
+          <div class="form-group">
+            <label for="photo-title">Journey Name</label>
+            <input
+              type="text"
+              id="photo-title"
+              name="title"
+              placeholder="e.g., Happy Journey"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="photo-file">Upload Photo</label>
+            <input
+              type="file"
+              id="photo-file"
+              name="photo"
+              accept="image/*"
+              required
+            />
+            <button type="button" class="camera-btn">
+              <i class="fa-solid fa-camera"></i> Use Camera
+            </button>
+          </div>
+
+          <div class="form-group">
+            <label for="photo-description">Description</label>
+            <textarea
+              id="photo-description"
+              name="description"
+              placeholder="Tell us about this moment..."
+              rows="3"
+              required
+            ></textarea>
+          </div>
+
+          <button type="submit" class="submit-btn">
+            <i class="fa-solid fa-upload"></i> Add Photo to Journey
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <script src="{% static 'js/script.js' %}"></script>
+  </body>
+</html>

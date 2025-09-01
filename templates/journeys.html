@@ -1,0 +1,126 @@
+{% load static %}
+<!-- link the static files with html -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ashva</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header>
+      <div class="logo">
+        <i class="fa-regular fa-camera"></i>
+        <h1>ASHVA</h1>
+      </div>
+
+      <!-- Hamburger -->
+      <div class="menu-toggle" id="menu-toggle">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+
+      <!-- Desktop Menu -->
+      <ul id="nav-links" class="nav-links">
+        <li><a href="{% url 'home' %}">Home</a></li>
+        <li><a href="{% url 'journeys' %}">My Journeys</a></li>
+        <li><a href="{% url 'add' %}">Add Photo</a></li>
+        <li><a href="{% url 'about' %}">About</a></li>
+        <li><a href="{% url 'contact' %}">Contact</a></li>
+      </ul>
+    </header>
+
+    <!-- Overlay for mobile menu -->
+    <div class="nav-overlay" id="nav-overlay"></div>
+
+    <section class="cards">
+      <div class="cardOne">
+        <img src="{% static 'images/A.png' %}" alt="Journey 1" />
+        <div class="cardContent">
+          <h2>Journey 1</h2>
+          <p>Exploring the mountains and capturing the beauty of nature.</p>
+        </div>
+      </div>
+
+      <div class="cardOne">
+        <img src="{% static 'images/A.png' %}" alt="Journey 1" />
+        <div class="cardContent">
+          <h2>Journey 1</h2>
+          <p>Exploring the mountains and capturing the beauty of nature.</p>
+        </div>
+      </div>
+
+      <div class="cardOne">
+        <img src="{% static 'images/A.png' %}" alt="Journey 1" />
+        <div class="cardContent">
+          <h2>Journey 1</h2>
+          <p>Exploring the mountains and capturing the beauty of nature.</p>
+        </div>
+      </div>
+
+      <div class="cardOne">
+        <img src="{% static 'images/A.png' %}" alt="Journey 1" />
+        <div class="cardContent">
+          <h2>Journey 1</h2>
+          <p>Exploring the mountains and capturing the beauty of nature.</p>
+        </div>
+      </div>
+
+      <div class="cardOne">
+        <img src="{% static 'images/A.png' %}" alt="Journey 1" />
+        <div class="cardContent">
+          <h2>Journey 1</h2>
+          <p>Exploring the mountains and capturing the beauty of nature.</p>
+        </div>
+      </div>
+
+      <div class="cardOne">
+        <img src="{% static 'images/A.png' %}" alt="Journey 1" />
+        <div class="cardContent">
+          <h2>Journey 1</h2>
+          <p>Exploring the mountains and capturing the beauty of nature.</p>
+        </div>
+      </div>
+
+      <div class="cardOne">
+        <img src="{% static 'images/A.png' %}" alt="Journey 1" />
+        <div class="cardContent">
+          <h2>Journey 1</h2>
+          <p>Exploring the mountains and capturing the beauty of nature.</p>
+        </div>
+      </div>
+
+      <div class="cardOne">
+        <img src="{% static 'images/A.png' %}" alt="Journey 1" />
+        <div class="cardContent">
+          <h2>Journey 1</h2>
+          <p>Exploring the mountains and capturing the beauty of nature.</p>
+        </div>
+      </div>
+
+      <div class="cardOne">
+        <img src="{% static 'images/A.png' %}" alt="Journey 1" />
+        <div class="cardContent">
+          <h2>Journey 1</h2>
+          <p>Exploring the mountains and capturing the beauty of nature.</p>
+        </div>
+      </div>
+
+      <div class="cardOne">
+        <img src="{% static 'images/A.png' %}" alt="Journey 1" />
+        <div class="cardContent">
+          <h2>Journey 1</h2>
+          <p>Exploring the mountains and capturing the beauty of nature.</p>
+        </div>
+      </div>
+    </section>
+
+    <script src="{% static 'js/script.js' %}"></script>
+  </body>
+</html>

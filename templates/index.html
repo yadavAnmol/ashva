@@ -1,0 +1,66 @@
+{% load static %}
+<!-- link the static files with html -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ashva</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header>
+      <div class="logo">
+        <i class="fa-regular fa-camera"></i>
+        <h1>ASHVA</h1>
+      </div>
+
+      <!-- Hamburger -->
+      <div class="menu-toggle" id="menu-toggle">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+
+      <!-- Desktop Menu -->
+      <ul id="nav-links" class="nav-links">
+        <li><a href="{% url 'home' %}">Home</a></li>
+        <li><a href="{% url 'journeys' %}">My Journeys</a></li>
+        <li><a href="{% url 'add' %}">Add Photo</a></li>
+        <li><a href="{% url 'about' %}">About</a></li>
+        <li><a href="{% url 'contact' %}">Contact</a></li>
+      </ul>
+    </header>
+
+    <!-- Overlay for mobile menu -->
+    <div class="nav-overlay" id="nav-overlay"></div>
+
+    <!-- Hero Section -->
+    <main>
+      <section class="hero">
+        <div class="hero-card">
+          <div class="hero-logo">
+            <i class="fa-solid fa-camera"></i>
+            <h2>ASHVA</h2>
+          </div>
+          <h3>Your Journey, Your Memories</h3>
+          <p>
+            ASHVA helps you capture, organize, and cherish the unforgettable
+            moments from your travels. Create beautiful photo journals, remember
+            every detail, and relive your adventures anytime, anywhere.
+          </p>
+          <div class="hero-buttons">
+            <a href="{% url 'journeys' %}" class="btn primary">My Journeys</a>
+            <a href="{% url 'add' %}" class="btn secondary">Add a Photo</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="{% static 'js/script.js' %}"></script>
+  </body>
+</html>
