@@ -25,8 +25,9 @@ header {
   justify-content: space-between;
   padding: 0.5rem 2rem;
   background: #faf2ea;
-  backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
   z-index: 1000;
 }
@@ -282,11 +283,11 @@ main {
 }
 
 .add-card {
-  background: #fff;
+  background: #ffeddb;
   padding: 2rem 2.5rem;
   border-radius: 12px;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-  max-width: 500px;
+  max-width: 550px;
   width: 100%;
   text-align: center;
 }
